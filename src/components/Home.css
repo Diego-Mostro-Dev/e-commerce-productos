@@ -1,0 +1,86 @@
+/* Home.css */
+
+/* Contenedor principal de la página de inicio */
+.wrapper-home {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0 1rem;
+}
+
+/* Estilo para el título principal */
+.wrapper-home h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #2c3e50;
+}
+
+/* Estilo para el contenedor del Header */
+/* Home.css */
+
+.wrapper-home {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 100vh;
+    margin: 80px;
+    /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+}
+
+.productos {
+    flex: 0 0 75%;
+    /* Ocupa el 75% del ancho del contenedor */
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 2rem;
+}
+
+.header {
+    flex: 0 0 25%;
+    /* Ocupa el 25% del ancho del contenedor */
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilo para el contenedor de productos */
+.productos {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    margin-top: 2rem;
+}
+
+/* Opcional: agregar estilo para los items (productos) si tienes una clase específica para ellos */
+.item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
