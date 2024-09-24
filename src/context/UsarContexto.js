@@ -42,7 +42,7 @@ export default function UsarContexto(props) {
     const incrementarCantidad = (id) => {
         dispatch({ type: 'INCREMENTAR_CANTIDAD', payload: id });
     };
-
+    console.log(state.productos, 'esto es el state');
     return (
         <Contexto.Provider
             value={{

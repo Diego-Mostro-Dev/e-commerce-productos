@@ -6,7 +6,7 @@ import Header from './Header';
 
 export default function Home() {
     const { listameProductos, productos } = useContext(Contexto);
-    console.log(productos, 'esto es desde Home');
+    console.log(productos, 'esto es desde para ver que productos llegan aca');
 
     useEffect(() => {
         listameProductos();
