@@ -4,10 +4,11 @@ import '../components/ItemCarrito.css'
 
 export default function ItemCarrito(props) {
     const { id, title, eliminarCarrito, price, image_url, cantidad, incrementarCantidad } = props
+    console.log(image_url, "url de la imagen que llega a itemcarrito")
     return (
         <>
             <div className="wrapper">
-                <img height={50} width={50} src={image_url} alt="imagen" />
+                <img src={image_url} alt={title} width={100} height={100} />
                 <div>
                     <h1>Nombre: {title}</h1>
                 </div>
@@ -17,6 +18,7 @@ export default function ItemCarrito(props) {
                 <button onClick={() => eliminarCarrito(id)}>Eliminar</button>
 
             </div>
+
         </>
     )
 }
