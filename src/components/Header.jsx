@@ -44,7 +44,7 @@ export default function Header() {
                         id={item.id}
                         title={item.title}
                         price={item.price}
-                        image={item.image}
+                        image={item.image_url}
                         cantidad={item.cantidad}
                         eliminarCarrito={eliminarCarrito}
                         incrementarCantidad={incrementarCantidad}
