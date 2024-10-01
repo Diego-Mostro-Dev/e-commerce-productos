@@ -42,7 +42,7 @@ export default function Header() {
                     <ItemCarrito
                         key={item.id}
                         id={item.id}
-                        title={item.title}
+                        name={item.name}
                         price={item.price}
                         image_url={item.image_url}
                         cantidad={item.cantidad}

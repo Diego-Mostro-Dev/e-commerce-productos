@@ -5,6 +5,7 @@ import '../components/ItemCarrito.css'
 export default function ItemCarrito(props) {
     const { id, name, eliminarCarrito, price, image_url, cantidad, incrementarCantidad } = props
     console.log(image_url, "url de la imagen que llega a itemcarrito")
+    console.log(name, " name que llega a itemcarrito")
     return (
         <>
             <div className="wrapper">
