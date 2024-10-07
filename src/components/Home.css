@@ -2,9 +2,16 @@
 
 /* Contenedor principal de la página de inicio */
 .wrapper-home {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "productos";
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    margin: 0;
+    padding: 0 1rem;
     font-family: Arial, sans-serif;
     color: #333;
-    padding: 0 1rem;
 }
 
 /* Estilo para el título principal */
@@ -14,43 +21,12 @@
     color: #2c3e50;
 }
 
-/* Estilo para el contenedor del Header */
-/* Home.css */
-
-.wrapper-home {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0 1rem;
-    height: 100vh;
-    margin: 80px;
-    /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-}
-
-.productos {
-    flex: 0 0 75%;
-    /* Ocupa el 75% del ancho del contenedor */
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin-top: 2rem;
-}
-
+/* Estilo para el header */
 .header {
-    flex: 0 0 25%;
-    /* Ocupa el 25% del ancho del contenedor */
-    background-color: #3498db;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #3498db;
     color: #fff;
     padding: 1rem 2rem;
@@ -60,22 +36,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    z-index: 10;
 }
 
 /* Estilo para el contenedor de productos */
 .productos {
+    grid-area: productos;
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    margin-top: 2rem;
+    gap: 2.5rem;
+    /* Mayor separación entre los productos */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Aumenté el minmax para más espacio */
+    margin-top: 6rem;
+    /* Espacio para el header fijo */
+    padding: 1rem;
+    /* Espaciado interno para evitar que los productos toquen los bordes */
 }
 
-/* Opcional: agregar estilo para los items (productos) si tienes una clase específica para ellos */
+/* Estilo para los items (productos) */
 .item {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
+    /* Aumenté el padding para más espacio interno */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
