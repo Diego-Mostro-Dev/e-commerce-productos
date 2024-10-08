@@ -9,7 +9,7 @@ import Contexto from '../context/Contexto';
 
 
 export default function Cart() {
-    const { eliminarCarrito, vaciarCarrito, carrito, incrementarCantidad } = useContext(Contexto);
+    const { eliminarCarrito, vaciarCarrito, carrito, incrementarCantidad, elimiminarItemCarrito } = useContext(Contexto);
 
     // Calcular el total de precios y la cantidad total de productos       sssss
     const totalPrecio = carrito.reduce((total, item) => total + item.price * item.cantidad, 0);
@@ -49,6 +49,7 @@ export default function Cart() {
                         categoria={item.category}
                         eliminarCarrito={eliminarCarrito}
                         incrementarCantidad={incrementarCantidad}
+                        elimiminarItemCarrito={elimiminarItemCarrito}
                     />
                 ))}
             </aside>

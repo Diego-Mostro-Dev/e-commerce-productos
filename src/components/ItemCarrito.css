@@ -18,7 +18,7 @@
 .wrapper img {
     border-radius: 8px;
     margin-bottom: 1rem;
-    max-width: 50%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -31,16 +31,24 @@
 
 button {
     background-color: #3498db;
-    /* Color atractivo para el botón */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #2980b9;
-    /* Cambio de color en hover */
+}
+
+.close-button {
+    background-color: rgb(236, 95, 70);
+    padding: 0;
+}
+
+.close-button:hover {
+    background-color: rgb(240, 53, 20);
 }

@@ -42,6 +42,12 @@ export default function UsarContexto(props) {
     const incrementarCantidad = (id) => {
         dispatch({ type: 'INCREMENTAR_CANTIDAD', payload: id });
     };
+
+    const elimiminarItemCarrito = (id) => {
+        dispatch({ type: 'ELIMINAR_ITEM_CARRITO', payload: id });
+    };
+
+
     console.log(state.productos, 'esto es el state');
     return (
         <Contexto.Provider
@@ -51,6 +57,7 @@ export default function UsarContexto(props) {
                 eliminarCarrito,
                 vaciarCarrito,
                 incrementarCantidad,
+                elimiminarItemCarrito,
                 productos: state.productos,
                 carrito: state.carrito
             }}

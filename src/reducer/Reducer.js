@@ -4,6 +4,8 @@ const LISTAME_PRODUCTOS = 'LISTAME_PRODUCTOS'
 const AGREGAR_CARRITO = 'AGREGAR_CARRITO'
 const ELIMINAR_CARRITO = 'ELIMINAR_CARRITO'
 const VACIAR_CARRITO = 'VACIAR_CARRITO'
+const INCREMENTAR_CANTIDAD = 'INCREMENTAR_CANTIDAD'
+const ELIMINAR_ITEM_CARRITO = 'ELIMINAR_ITEM_CARRITO'
 
 export default function Reducer(state, action) {
     const { type, payload } = action
@@ -46,7 +48,7 @@ export default function Reducer(state, action) {
             const producto = state.carrito.find(item => item.id === payload);
             console.log(producto, 'el producto que se elimina');
 
-            // Asegúrate de que `producto` no sea `undefined`
+            // Me aseguro de que `producto` no sea `undefined`
             if (producto) {
                 if (producto.cantidad > 1) {
                     return {
@@ -66,7 +68,14 @@ export default function Reducer(state, action) {
             }
             return state;
 
-        case 'INCREMENTAR_CANTIDAD':
+        case ELIMINAR_ITEM_CARRITO:
+            return {
+                ...state,
+                carrito: state.carrito.filter(item => item.id !== payload)
+            };
+
+
+        case INCREMENTAR_CANTIDAD:
             return {
                 ...state,
                 carrito: state.carrito.map(item =>
