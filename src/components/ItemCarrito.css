@@ -6,27 +6,20 @@
     align-items: center;
     justify-content: center;
     background-color: #f9f9f9;
-    /* Color de fondo claro para mejor contraste */
-    width: 100%;
-    /* Ajusta el ancho según el diseño */
+    width: 90%;
     max-width: 600px;
-    /* Ancho máximo para no estirar demasiado en pantallas grandes */
     border: 1px solid #ddd;
-    /* Borde sutil */
     border-radius: 10px;
     padding: 1rem;
     margin: 1rem auto;
-    /* Centra el contenedor y añade margen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para darle profundidad */
-    background-color: #fff;
-    /* Color de fondo blanco para mejor visibilidad */
 }
 
 .wrapper img {
     border-radius: 8px;
-    /* Bordes redondeados para la imagen */
     margin-bottom: 1rem;
+    max-width: 50%;
+    height: auto;
 }
 
 .wrapper h1 {

@@ -24,33 +24,23 @@
 /* Estilo para el header */
 .header {
     grid-area: header;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #3498db;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+    font-size: clamp(0.25rem, 2vw, 1.5rem);
 }
 
+
+
+
+
 /* Estilo para el contenedor de productos */
+
 .productos {
     grid-area: productos;
     display: grid;
-    gap: 2.5rem;
-    /* Mayor separación entre los productos */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Aumenté el minmax para más espacio */
+    width: 90vw;
+    gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     margin-top: 6rem;
-    /* Espacio para el header fijo */
     padding: 1rem;
-    /* Espaciado interno para evitar que los productos toquen los bordes */
 }
 
 /* Estilo para los items (productos) */
@@ -58,7 +48,6 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem;
-    /* Aumenté el padding para más espacio interno */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;

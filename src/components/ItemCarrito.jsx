@@ -16,7 +16,7 @@ export default function ItemCarrito(props) {
                 <div><h1>Precio:{price}</h1></div>
                 <div><h1>Cantidad: {cantidad}</h1></div>
                 <button onClick={() => incrementarCantidad(id)}>+</button>
-                <button onClick={() => eliminarCarrito(id)}>Eliminar</button>
+                <button onClick={() => eliminarCarrito(id)}>--</button>
 
             </div>
 
