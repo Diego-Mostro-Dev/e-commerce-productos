@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <>
             <div className="header">
-                <h1>Carrito de compras</h1>
+                <h1>Tienda Online ✨</h1>
                 <Cart />
             </div>
 

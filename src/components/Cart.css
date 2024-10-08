@@ -1,9 +1,9 @@
 .cart {
-    background: #b072a6;
+    background: #387478;
     display: none;
     padding: 32px;
     position: fixed;
-    overflow: auto;
+    overflow: scroll;
     right: 0px;
     top: 0px;
     width: 200px;
@@ -24,6 +24,7 @@
     padding-bottom: 16px;
 }
 
+
 .cart footer {
     display: flex;
     gap: 8px;
@@ -37,7 +38,7 @@
 
 .cart-button {
     align-items: center;
-    background: #09f;
+    background: #387478;
     border-radius: 90px;
     cursor: pointer;
     display: flex;
