@@ -42,7 +42,7 @@ export default function Cart() {
                     <ItemCarrito
                         key={item.id}
                         id={item.id}
-                        name={item.name}
+                        title={item.title}
                         price={item.price}
                         image={item.image}
                         cantidad={item.cantidad}

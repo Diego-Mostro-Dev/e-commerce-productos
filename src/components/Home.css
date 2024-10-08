@@ -36,23 +36,9 @@
 .productos {
     grid-area: productos;
     display: grid;
-    width: 90vw;
-    gap: 100px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 90%;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-top: 6rem;
     padding: 1rem;
-}
-
-/* Estilo para los items (productos) */
-.item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.item:hover {
-    transform: translateY(-5px);
 }
