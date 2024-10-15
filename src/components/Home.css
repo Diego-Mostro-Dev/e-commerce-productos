@@ -3,23 +3,18 @@
 /* Contenedor principal de la página de inicio */
 .wrapper-home {
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         "header"
         "productos";
-    grid-template-rows: auto 1fr;
-    height: 100vh;
+    justify-content: center;
     margin: 0;
     padding: 0 1rem;
     font-family: Arial, sans-serif;
     color: #333;
 }
 
-/* Estilo para el título principal */
-.wrapper-home h1 {
-    text-align: center;
-    margin: 2rem 0;
-    color: #2c3e50;
-}
+
 
 /* Estilo para el header */
 .header {
@@ -30,15 +25,17 @@
 
 
 
-
 /* Estilo para el contenedor de productos */
-
 .productos {
     grid-area: productos;
     display: grid;
-    width: 90%;
-    gap: 50px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    background-color: rgb(61, 94, 124);
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+    margin: 1rem;
     margin-top: 6rem;
-    padding: 1rem;
 }
