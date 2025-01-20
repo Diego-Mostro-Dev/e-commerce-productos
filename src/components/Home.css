@@ -1,5 +1,3 @@
-/* Home.css */
-
 /* Contenedor principal de la página de inicio */
 .wrapper-home {
     display: grid;
@@ -7,14 +5,13 @@
     grid-template-areas:
         "header"
         "productos";
-    justify-content: center;
-    margin: 0;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+    /* Limitar el ancho total */
     font-family: Arial, sans-serif;
     color: #333;
 }
-
-
 
 /* Estilo para el header */
 .header {
@@ -22,20 +19,33 @@
     font-size: clamp(0.25rem, 2vw, 1.5rem);
 }
 
-
-
-
 /* Estilo para el contenedor de productos */
 .productos {
     grid-area: productos;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    gap: 20px;
     background-color: rgb(61, 94, 124);
     border-radius: 20px;
-    padding: 10px;
-    gap: 10px;
-    margin: 1rem;
-    margin-top: 6rem;
+    padding: 20px;
+    margin-top: 4rem;
+    /* Ajusta para separarlo del header */
+}
+
+/* Estilo responsivo para dispositivos pequeños */
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* Tarjetas más pequeñas */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr;
+        /* Una sola columna en pantallas muy pequeñas */
+        padding: 5px;
+    }
 }

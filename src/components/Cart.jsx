@@ -44,7 +44,7 @@ export default function Cart() {
                         id={item.id}
                         title={item.title}
                         price={item.price}
-                        image={item.image}
+                        image_url={item.image_url}
                         cantidad={item.cantidad}
                         categoria={item.category}
                         eliminarCarrito={eliminarCarrito}

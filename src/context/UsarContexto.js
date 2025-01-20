@@ -18,7 +18,7 @@ export default function UsarContexto(props) {
 
     const listameProductos = async () => {
         try {
-            const productos = await fetch('https://fakestoreapi.com/products')
+            const productos = await fetch('https://apiproductos-mocf.onrender.com/api/products/?format=json')
                 .then(res => res.json());
             console.log("Productos obtenidos:", productos);
             dispatch({ type: "LISTAME_PRODUCTOS", payload: productos });
