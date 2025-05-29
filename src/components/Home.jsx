@@ -9,7 +9,7 @@ export default function Home() {
 
     useEffect(() => {
         listameProductos();
-    }, []);
+    }, [listameProductos]);
 
     const [filters, setFilters] = useState({
         categoria: 'all',
