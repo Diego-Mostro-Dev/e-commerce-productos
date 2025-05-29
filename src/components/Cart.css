@@ -46,7 +46,7 @@
     justify-content: space-around;
     gap: 8px;
     padding: 4px;
-    position: absolute;
+    /* position: absolute; */
     right: 8px;
     top: 8px;
     transition: all .3s ease;

@@ -18,9 +18,9 @@ export default function UsarContexto(props) {
 
     const listameProductos = async () => {
         try {
-            const productos = await fetch('https://apiproductos-mocf.onrender.com/api/products/?format=json')
+            const productos = await fetch('https://fakestoreapi.com/products')
                 .then(res => res.json());
-            console.log("Productos obtenidos:", productos);
+            /* console.log("Productos obtenidos:", productos); */
             dispatch({ type: "LISTAME_PRODUCTOS", payload: productos });
         } catch (error) {
             console.error("Error al cargar los productos:", error);
@@ -48,7 +48,7 @@ export default function UsarContexto(props) {
     };
 
 
-    console.log(state.productos, 'esto es el state');
+    /* console.log(state.productos, 'esto es el state'); */
     return (
         <Contexto.Provider
             value={{

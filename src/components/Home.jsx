@@ -1,24 +1,39 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../components/Home.css';
 import Contexto from '../context/Contexto';
 import Item from '../components/Item';
 import Header from './Header';
 
-
 export default function Home() {
     const { listameProductos, productos } = useContext(Contexto);
-    console.log(productos, 'esto es desde para ver que productos llegan aca');
 
     useEffect(() => {
         listameProductos();
     }, []);
 
+    const [filters, setFilters] = useState({
+        categoria: 'all',
+        precioMin: 0
+    });
+
+    const filtrarProductos = (producto) => {
+        return (
+            producto.price >= filters.precioMin &&
+            (
+                filters.categoria === 'all' ||
+                producto.category === filters.categoria
+            )
+        );
+    };
+
+    const productosFiltrados = productos.filter(filtrarProductos);
+
     return (
         <>
-            <Header />
+            <Header changeFilters={setFilters} />
             <div className="wrapper-home">
                 <div className="productos">
-                    {productos.map(item => (
+                    {productosFiltrados.map(item => (
                         <Item key={item.id} {...item} />
                     ))}
                 </div>

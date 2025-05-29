@@ -1,16 +1,17 @@
 
 import './Header.css';
 import Cart from './Cart';
+import Filters from '../components/Filters';
 
-export default function Header() {
 
+export default function Header({ changeFilters }) {
     return (
-        <>
-            <div className="header">
-                <h1>Tienda Online ✨</h1>
-                <Cart />
-            </div>
-
-        </>
+        <div className="header">
+            <h1>E-commerce ✨</h1>
+            <Filters onChange={changeFilters} />
+            <Cart />
+        </div>
     );
 }
+
+
